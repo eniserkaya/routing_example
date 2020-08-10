@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:routing_examples/router.dart';
 import 'package:routing_examples/screens/about.dart';
 import 'package:routing_examples/screens/home.dart';
+import 'package:routing_examples/utils/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,11 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         cursorColor: Colors.red,
       ),
-      initialRoute: '/',
-      routes: {
-        '/':(context) => HomeScreen(),
-        '/about':(context) => AboutScreen()
-      }
+      initialRoute: homeRoute,
+      onGenerateRoute: Router.generateRoute,
     );
   }
 }
