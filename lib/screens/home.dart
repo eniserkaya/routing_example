@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'about.dart';
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,10 +17,15 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.navigate_next),
-        onPressed: () {
+        onPressed: () async {
 //          Navigator.push(context,
 //              MaterialPageRoute(builder: (context) => AboutScreen()));
-          Navigator.pushNamed(context, '/aboutScreen',arguments: 'Argument from home screen');
+          var responseFromNavigation = await Navigator.pushNamed(context, '/aboutScreen',arguments: 'Argument from home screen');
+          if(responseFromNavigation == 'showDialog'){
+            showDialog(context: context,builder: (context) => AlertDialog(
+              title: Text('DATA'),
+            ));
+          }
         },
       ),
     );
