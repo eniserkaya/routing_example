@@ -10,7 +10,7 @@ class Router {
       case homeRoute:
         return MaterialPageRoute(builder: (_) => HomeScreen());
       case aboutRoute:
-        return MaterialPageRoute(builder: (_) => AboutScreen());
+        return MaterialPageRoute(builder: (_) => AboutScreen(settings.arguments));
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

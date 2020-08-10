@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
 //          Navigator.push(context,
 //              MaterialPageRoute(builder: (context) => AboutScreen()));
-          Navigator.pushNamed(context, '/about');
+          Navigator.pushNamed(context, '/aboutScreen',arguments: 'Argument from home screen');
         },
       ),
     );

@@ -1,3 +1,3 @@
 
 const String homeRoute = '/';
-const String aboutRoute = '/secondScreen';
+const String aboutRoute = '/aboutScreen';
